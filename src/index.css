@@ -1,0 +1,32 @@
+:root {
+  --key-color-natural: hsl(0, 0%, 100%);
+  --key-color-natural-pressed: hsl(184, 100%, 96%);
+  --key-color-accidental: hsl(0, 0%, 20%);
+  --key-color-accidental-pressed: hsl(0, 0%, 60%);
+  --key-border-primary: 1px solid hsl(0, 0%, 73%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width > 820px) {
+  body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
