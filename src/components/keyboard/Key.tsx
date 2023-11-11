@@ -38,6 +38,12 @@ const Key: React.FC<KeyProps> = ({ keyNote, isAccidental, piano }) => {
     );
   };
 
+  const handleKeyTouch = (event: React.TouchEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    setIsKeyPressed(event.type === 'touchstart' || event.type === 'touchmove');
+  };
+
   return (
     <button
       className={`key ${isAccidental ? 'key-accidental' : 'key-natural'} ${
@@ -51,6 +57,9 @@ const Key: React.FC<KeyProps> = ({ keyNote, isAccidental, piano }) => {
       onMouseUp={handleKeyPress}
       onMouseEnter={handleKeyPress}
       onMouseOut={handleKeyPress}
+      onTouchStart={handleKeyTouch}
+      onTouchMove={handleKeyTouch}
+      onTouchEnd={handleKeyTouch}
     ></button>
   );
 };

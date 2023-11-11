@@ -13,7 +13,7 @@
 .key-natural {
   z-index: 1;
   height: 20rem;
-  margin-right: -1.75rem;
+  margin-right: -2.7rem;
   width: 3.25rem;
   background-color: var(--key-color-natural);
   &:nth-child(5),
